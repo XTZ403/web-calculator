@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор стоимости сайта</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator">
+    <header class="header">
+      <h1>Калькулятор стоимости сайта</h1>
+      <p>Рассчитайте бюджет проекта за пару секунд</p>
+    </header>
+
+    <section class="field">
+      <span class="field-label">Услуги</span>
+      <div class="checkbox-grid" id="servicesGrid"></div>
+    </section>
+
+    <section class="field">
+      <label class="field-label" for="pages">Количество страниц</label>
+      <div class="range-row">
+        <input type="range" id="pages" min="1" max="50" value="1">
+        <output id="pagesValue">1</output>
+      </div>
+    </section>
+
+    <section class="field">
+      <label class="field-label" for="urgency">Срочность</label>
+      <select id="urgency">
+        <option value="1">Стандартный (×1)</option>
+        <option value="1.5">Срочный (×1.5)</option>
+        <option value="2">Горит! (×2)</option>
+      </select>
+    </section>
+
+    <div class="total">
+      <span class="total-label">Итоговая стоимость</span>
+      <span class="total-value" id="total">$0</span>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
